@@ -1,0 +1,34 @@
+cs:
+  refinery:
+    plugins:
+      posters:
+        title: Posters
+    posters:
+      admin:
+        posters:
+          actions:
+            create_new: Přidat Poster
+            reorder: Řadit Posters
+            reorder_done: Konec řazení Posters
+          records:
+            title: Posters
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Posters. Zvolte "Přidat Poster" pro přidání prvního poster.
+          poster:
+            view_live_html: Zobrazit náhled poster<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit poster
+            delete: Smazat poster
+      posters:
+        show:
+          other: Další Posters
+  activerecord:
+    attributes:
+      'refinery/posters/poster':
+        name: Name
+        dimensions: Dimensions
+        printed_on: Printed On
+        print: Print
+        autographed: Autographed
+        photo: Photo
+        price: Price
+        description: Description

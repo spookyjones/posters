@@ -14,3 +14,9 @@ Refinery::Products::Engine.load_seed
 
 # Added by Refinery CMS Search engine
 Refinery::Search::Engine.load_seed
+
+# Added by Refinery CMS Posters extension
+Refinery::Posters::Engine.load_seed
+
+# Added by Refinery CMS News engine
+Refinery::News::Engine.load_seed

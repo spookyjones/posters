@@ -1,0 +1,64 @@
+<%= form_for [refinery, :posters_admin, @poster] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @poster,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :dimensions -%>
+    <%= f.text_field :dimensions -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :printed_on -%>
+    <%= f.date_select :printed_on -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :print -%>
+    <%= f.check_box :print, :checked => @poster[:print] -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :autographed -%>
+    <%= f.check_box :autographed, :checked => @poster[:autographed] -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @poster.photo,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "posters/poster" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.posters.admin.posters.poster'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @poster.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

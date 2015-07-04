@@ -1,0 +1,19 @@
+<section id="body_content">
+  <section id="body">
+    <div id="poster">
+      <%= image_fu @poster.photo, "400x400", class: "image-align-left" %>
+      <h1><%= @poster.name %></h1>
+      <p>
+        <b>Dimensions:</b> <%= @poster.dimensions %>
+      </p>
+      <p>
+        <b>Price:</b> <%= @poster.price %>
+      </p> 
+      <p>
+        <b>Print Date:</b> <%= @poster.printed_on.year %>
+      </p> 
+      <%= raw @poster.description %>
+      <p class="back"><%= link_to "Back to Posters", refinery.posters_posters_path %></p>
+    </div>
+  </section>
+</section>     

@@ -1,0 +1,36 @@
+zh-CN:
+  refinery:
+    plugins:
+      posters:
+        title: Posters
+    posters:
+      admin:
+        posters:
+          actions:
+            create_new: 建立新的 Poster
+            reorder: 对 Posters 重新排序
+            reorder_done: 对 Posters 的重新排序结束
+          records:
+            title: Posters
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Posters yet. Click "Add New Poster" to add your first poster.
+            no_items_yet: 目前没有 Posters . 点击 "Add New Poster" 创建一个poster.
+          poster:
+            view_live_html: 查看 poster 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 poster
+            delete: 永久删除 poster
+      posters:
+        show:
+          other: 其他 Posters
+  activerecord:
+    attributes:
+      'refinery/posters/poster':
+        name: Name
+        dimensions: Dimensions
+        printed_on: Printed On
+        print: Print
+        autographed: Autographed
+        photo: Photo
+        price: Price
+        description: Description

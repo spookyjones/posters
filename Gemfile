@@ -7,6 +7,14 @@ gem 'rails', '4.2.1'
 group :development, :test do
   gem 'sqlite3'
 end
+group :production do
+  gem 'pg'
+end
+
+group :production do
+  gem 'fog'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,7 +54,7 @@ group :development, :test do
 end
 
 
-
+gem "refinerycms-news", git: 'https://github.com/refinery/refinerycms-news.git', branch: 'master'
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
 
@@ -63,3 +71,5 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 
 # Add support for Refinery's custom fork of the visual editor WYMeditor.
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+
+gem 'refinerycms-posters', path: 'vendor/extensions'

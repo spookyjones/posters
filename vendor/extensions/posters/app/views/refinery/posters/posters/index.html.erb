@@ -1,0 +1,21 @@
+<section id="body_content">
+  <section id="body">
+    <div id="posters">
+      <table>
+      <% @posters.each do |poster| %>
+        <tr>
+          <td>    
+           <%= image_fu poster.photo, "200x200", class: "image-align-center" %>
+          </td>
+          <td>
+           <h2><%= poster.name %></h2>
+           <%= poster.price %>
+           <%= raw poster.description %>
+           <p class="back"><%= link_to "More Information", refinery.posters_poster_path(poster) %></p>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </section>
+</section>     

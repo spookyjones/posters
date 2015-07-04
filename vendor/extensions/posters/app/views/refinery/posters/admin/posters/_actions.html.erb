@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Posters::Admin::PostersController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.posters_admin_posters_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_posters_admin_poster_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Posters::Admin::PostersController.sortable? && ::Refinery::Posters::Poster.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.posters_admin_posters_path,
+                     t('.reorder', what:  "Posters"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.posters_admin_posters_path,
+                      t('.reorder_done', what: "Posters"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

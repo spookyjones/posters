@@ -1,0 +1,34 @@
+nl:
+  refinery:
+    plugins:
+      posters:
+        title: Posters
+    posters:
+      admin:
+        posters:
+          actions:
+            create_new: Nieuwe Poster toevoegen
+            reorder: De volgorde van de Posters wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Poster-volgorde
+          records:
+            title: Posters
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Posters. Druk op 'Nieuwe Poster toevoegen' om de eerste toe te voegen.
+          poster:
+            view_live_html: Deze poster op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze poster
+            delete: Deze poster definitief verwijderen
+      posters:
+        show:
+          other: Andere Posters
+  activerecord:
+    attributes:
+      'refinery/posters/poster':
+        name: Name
+        dimensions: Dimensions
+        printed_on: Printed On
+        print: Print
+        autographed: Autographed
+        photo: Photo
+        price: Price
+        description: Description
